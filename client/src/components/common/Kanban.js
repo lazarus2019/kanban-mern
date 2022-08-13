@@ -15,7 +15,6 @@ import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import sectionApi from "../../api/sectionApi";
 import taskApi from "../../api/taskApi";
 import TaskModal from "./TaskModal";
-import EmojiPicker from "./EmojiPicker";
 
 let timer;
 const timeout = 500;
