@@ -40,6 +40,7 @@ const AppLayout = () => {
           flexGrow: 1,
           p: 1,
           width: "max-content",
+          height: '100vh'
         }}
       >
         <Outlet />

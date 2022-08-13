@@ -7,7 +7,7 @@ import Loading from "../common/Loading";
 import assets from "../../assets";
 
 function AuthLayout() {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
