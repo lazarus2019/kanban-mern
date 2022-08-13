@@ -15,4 +15,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api/v1", require('./src/v1/routes'));
 
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "/client/build")));
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "/client/build/index.html"))
+);
+
 module.exports = app;

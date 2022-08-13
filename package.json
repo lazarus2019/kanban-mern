@@ -1,0 +1,21 @@
+{
+  "name": "kanban",
+  "version": "1.0.0",
+  "description": "Project base on video of [Tuat Tran Anh](https://youtu.be/sqGowdB1tvY)",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd server && npm install && cd ../client && npm install && npm run build",
+    "start": "node server/bin/www.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazarus2019/kanban-mern.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lazarus2019/kanban-mern/issues"
+  },
+  "homepage": "https://github.com/lazarus2019/kanban-mern#readme"
+}
