@@ -19,9 +19,9 @@ function Signup() {
     setConfirmPasswordErrText("");
 
     const data = new FormData(e.target);
-    const username = data.get("username").trim();
-    const password = data.get("password").trim();
-    const confirmPassword = data.get("confirmPassword").trim();
+    const username = data.get("username");
+    const password = data.get("password");
+    const confirmPassword = data.get("confirmPassword");
     let err = false;
     if (username === "") {
       err = true;
@@ -54,17 +54,19 @@ function Signup() {
       navigate("/");
     } catch (err) {
       const errors = err.data.errors;
-      errors.forEach((e) => {
-        if (e.param === "username") {
-          setUsernameErrText(e.msg);
-        }
-        if (e.param === "password") {
-          setPasswordErrText(e.msg);
-        }
-        if (e.param === "confirmPassword") {
-          setConfirmPasswordErrText(e.msg);
-        }
-      });
+      if (errors) {
+        errors.forEach((e) => {
+          if (e.param === "username") {
+            setUsernameErrText(e.msg);
+          }
+          if (e.param === "password") {
+            setPasswordErrText(e.msg);
+          }
+          if (e.param === "confirmPassword") {
+            setConfirmPasswordErrText(e.msg);
+          }
+        });
+      }
       setLoading(false);
     }
   };

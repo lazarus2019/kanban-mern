@@ -12,11 +12,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "/client/build")));
-app.get("*", (req, res) =>
-  res.sendFile(path.join(__dirname, "/client/build/index.html"))
-);
+// const __dirname = path.resolve();
+// app.use(express.static(path.join(__dirname, "/client/build")));
+// app.get("*", (req, res) =>
+//   res.sendFile(path.join(__dirname, "/client/build/index.html"))
+// );
 
 app.use("/api/v1", require("./src/v1/routes"));
 
